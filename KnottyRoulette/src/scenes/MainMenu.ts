@@ -14,10 +14,24 @@ export class MainMenu extends Scene
     create ()
     {
 
-        this.add.image(512, 384, 'wheelBase');
-        this.add.image(512, 384, 'wheel');
-        this.add.image(512, 384, 'wheelPointer');
-        // this.background = this.add.image(512, 384, 'background');
+        //Background image
+        this.background = this.add.image(512, 384, 'background');
+
+        // Display the wheel images
+        let wheel = this.add.image(512, 384, 'wheel');
+        let wheelBase = this.add.image(512, 384, 'wheelBase');
+        let wheelPointer = this.add.image(512, 384, 'wheelPointer');
+
+        // Set the Wheel spin images scale
+        let wheelScale = 0.3
+        wheel.setScale(wheelScale);
+        wheelBase.setScale(wheelScale);
+        wheelPointer.setScale(wheelScale);
+
+        // rotate the image
+
+        
+        
 
         // this.logo = this.add.image(512, 300, 'logo');
 
