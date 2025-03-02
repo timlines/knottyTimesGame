@@ -28,6 +28,9 @@ export class MainMenu extends Scene
         wheelBase.setScale(wheelScale);
         wheelPointer.setScale(wheelScale);
 
+
+        
+
        
 
         
@@ -43,11 +46,15 @@ export class MainMenu extends Scene
 
         this.input.addListener('pointerdown', () => {
 
+            let spin = Math.random()*100;
+            console.log(spin);
+
              // spin the wheel
             this.tweens.add({
+               
                 targets: wheel, // your image that must spin
-                rotation: 100, //rotation must be radian
-                duration: 5000 //duration is in milliseconds
+                rotation: spin, //rotation must be radian
+                duration: 3000 //duration is in milliseconds
             })
 
             // this.scene.start('Game');
