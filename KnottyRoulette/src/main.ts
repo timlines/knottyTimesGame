@@ -1,6 +1,7 @@
 import { Boot } from './scenes/Boot';
 import { Game as MainGame } from './scenes/Game';
 import { GameOver } from './scenes/GameOver';
+import { Spin } from './scenes/Spin';
 import { MainMenu } from './scenes/MainMenu';
 import { Preloader } from './scenes/Preloader';
 
@@ -21,6 +22,7 @@ const config: Types.Core.GameConfig = {
     scene: [
         Boot,
         Preloader,
+        Spin,
         MainMenu,
         MainGame,
         GameOver
