@@ -14,7 +14,8 @@ export class Boot extends Scene
 
         this.load.image('background', 'assets/bg.png');
         this.load.image('wheelBase', 'assets/wheelofspin-base.png')
-        this.load.image('wheel', 'assets/wheelofspin-wheel.png')
+        // this.load.image('wheel', 'assets/wheelofspin-wheel.png')
+        this.load.image('wheel', 'assets/wheelofspin-wheelCenter.png')
         this.load.image('wheelPointer', 'assets/wheelofspin-pointer.png')
     }
 

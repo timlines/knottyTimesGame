@@ -18,8 +18,8 @@ export class MainMenu extends Scene
         this.background = this.add.image(512, 384, 'background');
 
         // Display the wheel images
-        let wheel = this.add.image(512, 384, 'wheel');
         let wheelBase = this.add.image(512, 384, 'wheelBase');
+        let wheel = this.add.image(512, 335, 'wheel');
         let wheelPointer = this.add.image(512, 384, 'wheelPointer');
 
         // Set the Wheel spin images scale
@@ -28,7 +28,7 @@ export class MainMenu extends Scene
         wheelBase.setScale(wheelScale);
         wheelPointer.setScale(wheelScale);
 
-        // rotate the image
+       
 
         
         
@@ -41,9 +41,16 @@ export class MainMenu extends Scene
         //     align: 'center'
         // }).setOrigin(0.5);
 
-        this.input.once('pointerdown', () => {
+        this.input.addListener('pointerdown', () => {
 
-            this.scene.start('Game');
+             // spin the wheel
+            this.tweens.add({
+                targets: wheel, // your image that must spin
+                rotation: 100, //rotation must be radian
+                duration: 5000 //duration is in milliseconds
+            })
+
+            // this.scene.start('Game');
 
         });
     }
